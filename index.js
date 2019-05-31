@@ -12,10 +12,10 @@ http
         return res.end(err.stack || err);
       }
       if (req.url == '/') {
-        res.writeHead(200, headers);
-        return res.end(
-          'Use the format http://thissite.com/proxy/http://site-i-want.com/ to access the proxy.'
-        );
+        res.writeHead(301, {
+          'Location': 'https://muun.cf/'
+        });
+        res.end();
       } else {
         res.writeHead(404, headers);
         return res.end('Error 404: file not found.');

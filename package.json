@@ -1,0 +1,10 @@
+{
+  "name": "muun",
+  "version": "0.0.1",
+  "dependencies": {
+    "@abai/proxy": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

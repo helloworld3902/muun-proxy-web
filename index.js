@@ -1,5 +1,6 @@
 const http = require('http');
 const Unblocker = require('@abai/proxy');
+const package = require('./package.json');
 
 const unblocker = Unblocker({});
 
@@ -12,7 +13,7 @@ http
         return res.end(err.stack || err);
       } else {
         res.writeHead(404, headers);
-        return res.end('Error 404: file not found.');
+        return res.end(`Error 404: file not found. (Version: ${package.dependencies['@abai/proxy']})`);
       }
     });
   })

@@ -2,7 +2,7 @@
   "name": "muun",
   "version": "0.0.1",
   "dependencies": {
-    "@abai/proxy": "^1.0.0",
+    "@abai/proxy": "^5.0.0",
     "grumpy": "^0.1.3"
   },
   "scripts": {

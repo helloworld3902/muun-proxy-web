@@ -7,7 +7,7 @@ const unblocker = Unblocker({});
 http
   .createServer((req, res) => {
     unblocker(req, res, err => {
-      const headers = { 'content-type': 'text/plain' };
+      const headers = { 'content-type': 'text/plain', 'x-frame-options': 'allow-from https://muun.cf/' };
       if (err) {
         res.writeHead(500, headers);
         return res.end(err.stack || err);
